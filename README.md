@@ -23,3 +23,11 @@ The dataset includes patients categorized into three groups: Normal, Disk Hernia
 4. The trained model is deployed and hosted using SageMaker, creating an endpoint URL.
 5. Predictions are performed on the test dataset using the deployed model.
 6. Model performance is evaluated by comparing predictions with ground truth labels, calculating performance metrics, and visualizing the results.
+
+
+## what more can be done if i ever get back on improving it : 
+1. Handle outliers more rigorously: I noticed a few outliers in degree_spondylolisthesis. I can try Capping extreme values using IQR or Z-score
+2. Log transformation for skewed features
+3. Feature scaling: XGBoost handles unscaled data decently, but trying StandardScaler/MinMaxScaler may help in visualization or if trying other models.
+4. Feature creation: Create new features (e.g., pelvic_incidence - pelvic_tilt) to explore hidden patterns.
+
